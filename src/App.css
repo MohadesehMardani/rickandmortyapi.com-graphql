@@ -34,14 +34,13 @@ header{
   outline: none;
   background-color: var(--primary-color);
 }
-#main{
-  /* display: flex; */
-  flex-wrap: wrap;
-}
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 7px;
+  display: flex;
+  flex-wrap: wrap;
+
 }
 .movie{
   width: 300px;
@@ -96,4 +95,11 @@ header{
 }
 .movie:hover .overview{
   transform: translateY(0);
+}
+@media(max-width: 480px){
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+  }
 }
